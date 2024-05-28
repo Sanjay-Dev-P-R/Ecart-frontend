@@ -1,0 +1,40 @@
+         
+          
+           
+                                                      E-CART 
+                                        /***************************************\
+
+
+
+1. create a new folder e cart 
+2. Inside i nit create a new angular project - ng new ecart frontend
+3. Install 3rd party libraries
+     -->MDBootstrap -  npm i mdb-angular-ui-kit
+     -->font-awesome - npm i @fortawesome/fontawesome-free
+     -->google fonts - @import in style.css
+4. Lazy Loading
+   Lazy loading is a technology of angular that allows you to load JavaScript components when a specific route is activated.
+    It improves application load time speed by splitting the application into many bundles. 
+    When the user navigates by the app, bundles are loaded as needed.
+
+    Lazy loading helps to keep the bundle size small, which helps reduce load times. 
+    We must use the class decorator to create an Angular module @NgModule, and the decorator uses a metadata object that defines the module.
+
+5. create a new module in angular - here we create product module for implementing lazy loading
+  
+
+     ->ng g m products --route products --module app.module
+
+6. create component in lazy loading module(product module)
+   ->ng g c products/allProducts
+   ->ng g c products/viewProducts
+   ->ng g c products/wishlist
+   ->ng g c products/cart
+
+7. components thats not included in lazy loading module
+   ->ng g c header
+   ->ng g c footer 
+   ->ng g c pageNotFound
+     
+
+8 services ng g s products/services/api     

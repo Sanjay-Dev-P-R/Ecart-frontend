@@ -1,0 +1,36 @@
+<!-- card with products -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let wish of allWishlist">
+                <div class="card h-100 shadow">
+                    <!-- Product image-->
+                    <img class="card-img-top" [src]="wish.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{wish.title}}</h5>
+                            <!-- Product price-->
+                            ${{wish.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer d-flex justify-content-space-between p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="view-product/:id">Add to cart</a></div>
+                        <div class="text-center"><a (click)="deleteWishlistItem(wish.id)" class="btn btn-outline-dark mt-auto" >Remove</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Empty cards -->
+<div class="container text-center p-5" *ngIf="allWishlist.length==0">
+    <h1>Your Wishlist was Empty🛒</h1>
+    <img style="height: 17rem;" src="https://d3g01po1nkka75.cloudfront.net/allthingsgood-frontend-assets/wishlist-info-drawer-animation.gif" alt="">
+    <div>
+        <button class="btn btn-dark" routerLink="/">Shop Me</button>
+    </div>
+</div>

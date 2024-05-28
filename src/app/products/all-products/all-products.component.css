@@ -1,0 +1,19 @@
+.banner{
+    background-image: url("https://img.freepik.com/vetores-gratis/banner-elegante-de-fundo-preto-sexta-feira_1361-3577.jpg?w=2000");
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+   /* https://freight.cargo.site/w/1200/i/0d8aa64ba68241332d3fd80908605827162bd7007310dafffa65407e7dc43493/01-Bogo-Friday-Site-Banner.gif */
+}
+.card-img-top{
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+    
+}
+
+.card-img-top:hover{
+    transform: scale(1.1);
+    transition: 2s;
+
+}
